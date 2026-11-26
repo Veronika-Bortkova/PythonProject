@@ -330,7 +330,7 @@ from encodings import cp1006
     #     file.write("Hello Vik\nHi\n")
 
 
-        # режим аппенд = а Если файла нет, создаст, если есть, удет добапвлять через райт
+        # режим аппенд = а Если файла нет, создаст, если есть, удет добапвлять через wрайт
         # with open("2.txt", "a") as file:
         #     file.write("Tom\n")
 
@@ -455,9 +455,9 @@ from encodings import cp1006
 #         print("default")#андискором прописывается кейс по дефолту
 
 
-a = ["left", "200"]#Например что герою нужно пойти на лево на 200 шагов
+# a = ["left", "200"]#Например что герою нужно пойти на лево на 200 шагов
 # a = ["right", "200"]#Например что герою нужно пойти на лево на 200 шагов
-a = ["left",2001,3,4,5,6,7]
+# a = ["left",2001,3,4,5,6,7]
 
 #матч кейс умеет дистпуктурировать получаемую информацию
 #
@@ -485,11 +485,11 @@ a = ["left",2001,3,4,5,6,7]
 
 user_dict = {"name":"Max", "age": 27}
 
-class User:
-    __match_args__ = ("name", "age")
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class User:
+#     __match_args__ = ("name", "age")
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
 user_class = User("Nica", 46)
 
@@ -501,16 +501,16 @@ user_class = User("Nica", 46)
 
 #это же решение с матчем
 
-def matcher(source: User|dict):
-    match source:
-        case User(name, age):
-            print(name, age)
+# def matcher(source: User|dict):
+#     match source:
+#         case User(name, age):
+#             print(name, age)
+#
+#         case {"name": name, "age": age}:# если бы хотели найти с конкретым именем, например, то {"name": "Max" as name, "age": age}
+#             print(name,age)
 
-        case {"name": name, "age": age}:# если бы хотели найти с конкретым именем, например, то {"name": "Max" as name, "age": age}
-            print(name,age)
 
-
-matcher(user_class)#Nica 46
-matcher(user_dict)#Max 27
+#matcher(user_class)#Nica 46
+#matcher(user_dict)#Max 27
 
 

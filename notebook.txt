@@ -1,0 +1,6 @@
+id: 1, name: box, price: 500
+id: 2, name: pen, price: 70
+id: 3, name: bread, price: 47
+id: 4, name: bread, price: 80
+id: 5, name: chees, price: 70
+id: 7, name: pensil, price: 500
